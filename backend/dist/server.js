@@ -9,14 +9,14 @@ import salesRoutes from "./routes/saleRoutes.js";
 import staffRoutes from "./routes/staffRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
-import alertRoutes from "./routes/alertRoute.js"; // ← Add this
+import alertRoutes from "./routes/alertRoute.js"; 
 dotenv.config();
 connectDB();
 const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-// API Routes (must be BEFORE React static fallback)
+
 app.use("/api/customers", customerRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/suppliers", supplierRoutes);
